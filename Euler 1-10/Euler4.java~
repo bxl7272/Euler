@@ -1,0 +1,28 @@
+public class Euler4 {
+  public static void main (String[] args) {
+    int palin = 0;
+    int a = 0;
+    int reverse = 0;
+    int bigPalin = 0;
+    for (int i = 999; i > 850; i--){
+      for (int k = 999; k > 850; k--){
+        palin = i*k;
+        a = palin;
+        System.out.println(palin);
+        while (palin != 0){
+          reverse = reverse*10;
+          reverse = reverse + palin%10;
+          palin = palin/10;
+        }
+        if (reverse == a){
+          if (reverse > bigPalin){
+            bigPalin = reverse;
+        }
+      }
+    }
+    
+  }
+             System.out.println(bigPalin);
+  }
+}
+
